@@ -24,9 +24,9 @@ In this competition your task is to predict whether a passenger was transported 
 
 **Transported** - Whether the passenger was transported to another dimension. This is the target, the column you are trying to predict.
 
----
+----
 test.csv - Personal records for the remaining one-third (~4300) of the passengers, to be used as test data. Your task is to predict the value of Transported for the passengers in this set.
----
+----
 
 ## 3. Submisssion Format
 **PassengerId** - Id for each passenger in the test set.
