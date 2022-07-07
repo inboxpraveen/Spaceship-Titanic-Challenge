@@ -9,3 +9,7 @@ if not os.path.exists(MODEL_PATH):
 if not os.path.exists(TEMP_PATH):
     os.makedir(TEMP_PATH)
 
+def download_data(dataset_name :str = "") -> bool:
+    ...
+
+
