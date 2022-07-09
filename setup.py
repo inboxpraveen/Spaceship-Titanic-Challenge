@@ -18,5 +18,5 @@ def download_data(dataset_name :str = "") -> bool:
 
 
 if __name__ == "__main__":
+    ...
     
-
