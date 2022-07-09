@@ -2,13 +2,13 @@ from utils import *
 import kaggle
 
 if not os.path.exists(DATA_PATH):
-    os.makedir(DATA_PATH)
+    os.mkdir(DATA_PATH)
 
 if not os.path.exists(MODEL_PATH):
-    os.makedir(MODEL_PATH)
+    os.mkdir(MODEL_PATH)
 
 if not os.path.exists(TEMP_PATH):
-    os.makedir(TEMP_PATH)
+    os.mkdir(TEMP_PATH)
 
 def download_data(dataset_name :str = "") -> bool:
     try:
@@ -18,6 +18,7 @@ def download_data(dataset_name :str = "") -> bool:
     except Exception as e:
         print(f"Unable to download dataset due to: {e}")
         return False
+
 
 if __name__ == "__main__":
     input_dataset = input(f"Enter dataset name from kaggle: ")
