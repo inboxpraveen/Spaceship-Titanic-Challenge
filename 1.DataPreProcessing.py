@@ -69,10 +69,14 @@ def fill_values_by_based_on_mean_and_variance(df, column_name):
     value_count_list = dict(df[column_name].value_counts())
     total_rows = len(df[column_name])
     total_nan = int(df[column_name].isnull().sum())
-    print("value count for: ",value_count_list)
-    x = value_count_list.keys()
-    y = value_count_list.values()
-    print(zip(x,y))
+    sorted_zipped_list = [(x,y) for x,y in sorted(zip(value_count_list.values(),value_count_list.keys()))]
+    
+    ratio_list = [(y,x/total_rows) for x,y in sorted_zipped_list]
+    nan_ratio = total_nan/total_rows
+    
+    for key,each_different_value in value_count_list.items():
+        # print("key: %s, each_different_value: %s" % (key, each_different_value))
+        df.loc[df[column_name] == key,"ratio"] = each_different_value
     
     
     
