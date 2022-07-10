@@ -69,6 +69,10 @@ def fill_values_by_based_on_mean_and_variance(df, column_name):
     value_count_list = dict(df[column_name].value_counts())
     total_rows = len(df[column_name])
     total_nan = int(df[column_name].isnull().sum())
+    print("value count for: ",value_count_list)
+    x = value_count_list.keys()
+    y = value_count_list.values()
+    print(zip(x,y))
     
     
     
@@ -82,8 +86,8 @@ if __name__ == '__main__':
     rename_columns(test_df)
     
     # fill_values_by_based_on_group
-    train_df = fill_values_by_based_on_group(train_df,"home_planet")
-    test_df = fill_values_by_based_on_group(test_df,"home_planet")
+    # train_df = fill_values_by_based_on_group(train_df,"home_planet")
+    # test_df = fill_values_by_based_on_group(test_df,"home_planet")
 
     # fill_values_by_based_on_mean_and_variance
     train_df = fill_values_by_based_on_mean_and_variance(train_df,"home_planet")
