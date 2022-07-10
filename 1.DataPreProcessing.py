@@ -71,8 +71,6 @@ def fill_values_by_based_on_mean_and_variance(df, column_name):
     total_nan = int(df[column_name].isnull().sum())
     print("Total stats: {0}, {1}, {2}".format(value_count_list,total_nan,total_rows))
     
-    
-    
 
 if __name__ == '__main__':
     train_df = pd.read_csv(data_csv_path)
